@@ -20,12 +20,12 @@ export const metadata: Metadata = {
     "AI websites",
     "Next.js agency",
   ],
-  metadataBase: new URL("https://www.esaakadev.com"), // Replace with actual domain
+  metadataBase: new URL("https://esaaka-dev-solutions.vercel.app/"), 
   openGraph: {
     title: "Esaaka Dev Solutions",
     description: "Web development for the future — powered by AI and crafted with care.",
     type: "website",
-    url: "https://www.esaakadev.com",
+    url: "https://esaaka-dev-solutions.vercel.app/",
     siteName: "Esaaka Dev Solutions",
   },
   twitter: {
