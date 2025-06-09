@@ -1,4 +1,3 @@
-// components/Testimonials.tsx
 "use client";
 
 import { motion, Variants } from "framer-motion";

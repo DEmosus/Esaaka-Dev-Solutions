@@ -16,7 +16,7 @@ export default function Footer() {
             aria-label="Social media links"
           >
             <a
-              href="https://twitter.com"
+              href="https://x.com/Esaaka044"
               target="_blank"
               rel="noopener noreferrer"
               aria-label="Twitter"
@@ -24,7 +24,7 @@ export default function Footer() {
               <FaTwitter />
             </a>
             <a
-              href="https://github.com"
+              href="https://github.com/DEmosus"
               target="_blank"
               rel="noopener noreferrer"
               aria-label="GitHub"
@@ -32,7 +32,7 @@ export default function Footer() {
               <FaGithub />
             </a>
             <a
-              href="https://linkedin.com"
+              href="https://www.linkedin.com/in/isaac-ikimi-2203bb322"
               target="_blank"
               rel="noopener noreferrer"
               aria-label="LinkedIn"
