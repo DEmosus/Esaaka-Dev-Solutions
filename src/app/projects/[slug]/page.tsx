@@ -1,14 +1,18 @@
+// app/projects/[slug]/page.tsx
 import { notFound } from "next/navigation";
 import { projects } from "@/data/projects";
 import ProjectDetailsClient from "./ProjectDetailsClient";
 import type { Metadata } from "next";
 
-interface ProjectPageProps {
-  params: { slug: string };
+interface PageProps {
+  params: Promise<{ slug: string }>;
 }
 
-export async function generateMetadata({ params }: ProjectPageProps): Promise<Metadata> {
-  const project = projects.find((p) => p.slug === params.slug);
+export async function generateMetadata({
+  params,
+}: PageProps): Promise<Metadata> {
+  const { slug } = await params;
+  const project = projects.find((p) => p.slug === slug);
   if (!project) {
     return {
       title: "Project Not Found | Esaaka Dev Solutions",
@@ -31,8 +35,9 @@ export async function generateMetadata({ params }: ProjectPageProps): Promise<Me
   };
 }
 
-export default async function ProjectPage({ params }: ProjectPageProps) {
-  const project = projects.find((p) => p.slug === params.slug);
+export default async function ProjectPage({ params }: PageProps) {
+  const { slug } = await params;
+  const project = projects.find((p) => p.slug === slug);
   if (!project) return notFound();
   return <ProjectDetailsClient project={project} />;
 }
